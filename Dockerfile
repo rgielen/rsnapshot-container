@@ -4,7 +4,7 @@ FROM alpine:latest
 
 COPY --from=ofelia /usr/bin/ofelia /usr/bin/ofelia
 
-RUN apk --no-cache add rsnapshot ca-certificates
+RUN apk --no-cache add rsnapshot ca-certificates tzdata
 
 ENTRYPOINT ["/usr/bin/ofelia"]
 

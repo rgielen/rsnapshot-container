@@ -6,11 +6,12 @@ A Docker container for operating [rsnapshot](https://github.com/rsnapshot/rsnaps
 
 Create a suitable `rsnapshot.conf` and `ofelia.ini` - see sample files in this repository.
 
-## Docker Run
+## Docker Run Example
 
 ```
 docker run -it \
   -v $PWD/ofelia.ini:/etc/ofelia.ini:ro \
   -v $PWD/rsnapshot.conf:/etc/rsnapshot.conf:ro \
+  -e TZ=Europe/Berlin \
   rgielen/rsnapshot-ofelia
 ```
